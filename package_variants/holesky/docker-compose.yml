@@ -1,0 +1,26 @@
+version: "3.5"
+services:
+  validator-ejector:
+    build:
+      context: validator-ejector
+      args:
+        NETWORK: holesky
+  lido-dv-exit:
+    build:
+      context: lido-dv-exit
+      args:
+        DV_EXIT_VERSION: v0.2.0
+        NETWORK: holesky
+    image: lido-dv-exit.obol-lido-ejector-holesky.dnp.dappnode.eth:0.1.0
+    environment:
+      LOG_LEVEL: info
+      VALIDATOR_QUERY_CHUNK_SIZE: 5
+      CHARON_TO_EXIT_NUMBER: 1
+    restart: on-failure
+    volumes:
+      - validator-ejector:/exitmessages
+      - charon-data:/charon
+
+volumes:
+  validator-ejector: {}
+  charon-data: {}

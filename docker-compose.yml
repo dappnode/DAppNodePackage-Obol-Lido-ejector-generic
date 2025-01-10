@@ -1,0 +1,34 @@
+version: "3.5"
+services:
+  validator-ejector:
+    build:
+      context: validator-ejector
+      args:
+        EJECTOR_VERSION: 1.6.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
+    environment:
+      OPERATOR_ID: ""
+      CHARON_TO_EXIT_NUMBER: 1
+    restart: on-failure
+    volumes:
+      - validator-ejector:/exitmessages
+
+  lido-dv-exit:
+    build:
+      context: lido-dv-exit
+      args:
+        DV_EXIT_VERSION: v0.2.0
+        STAKER_SCRIPTS_VERSION: v0.1.1
+    environment:
+      LOG_LEVEL: info
+      VALIDATOR_QUERY_CHUNK_SIZE: 5
+      CHARON_TO_EXIT_NUMBER: 1
+      EXIT_EPOCH: 256
+    restart: on-failure
+    volumes:
+      - validator-ejector:/exitmessages
+      - charon-data:/charon
+
+volumes:
+  validator-ejector: {}
+  charon-data: {}

@@ -1,0 +1,57 @@
+{
+  "upstream": [
+    {
+      "repo": "ObolNetwork/lido-dv-exit",
+      "version": "v0.2.0",
+      "arg": "DV_EXIT_VERSION"
+    },
+    {
+      "repo": "lidofinance/validator-ejector",
+      "version": "1.6.0",
+      "arg": "EJECTOR_VERSION"
+    },
+    {
+      "repo": "dappnode/staker-package-scripts",
+      "version": "v0.1.1",
+      "arg": "STAKER_SCRIPTS_VERSION"
+    }
+  ],
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.101"
+  },
+  "description": "obol-lido-ejector-generic.public.dappnode.eth description",
+  "type": "service",
+  "author": "dappnode",
+  "categories": ["Developer tools"],
+  "links": {
+    "homepage": "https://your-project-homepage-or-docs.io"
+  },
+  "license": "GPL-3.0",
+  "backup": [
+    {
+      "path": "/charon/charon1",
+      "name": "charon1",
+      "service": "lido-dv-exit"
+    },
+    {
+      "path": "/charon/charon2",
+      "name": "charon2",
+      "service": "lido-dv-exit"
+    },
+    {
+      "path": "/charon/charon3",
+      "name": "charon3",
+      "service": "lido-dv-exit"
+    },
+    {
+      "path": "/charon/charon4",
+      "name": "charon4",
+      "service": "lido-dv-exit"
+    },
+    {
+      "path": "/charon/charon5",
+      "name": "charon5",
+      "service": "lido-dv-exit"
+    }
+  ]
+}
