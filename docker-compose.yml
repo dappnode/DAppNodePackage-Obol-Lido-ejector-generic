@@ -23,7 +23,7 @@ services:
       LOG_LEVEL: info
       VALIDATOR_QUERY_CHUNK_SIZE: 5
       CHARON_TO_EXIT_NUMBER: 1
-      EXIT_EPOCH: 256
+      EXIT_EPOCH: 194048
     restart: on-failure
     volumes:
       - validator-ejector:/exitmessages

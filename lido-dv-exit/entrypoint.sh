@@ -19,9 +19,12 @@ if [ -z "$ CHARON_DIR" ] || [ ! -d "$CHARON_DIR" ]; then
     exit 0
 fi
 
+# To use staker scripts
+# shellcheck disable=SC1091
+. /etc/profile
+
 # Call the function and store its return value in a variable
 BEACON_API_URL="$(get_beacon_api_url_from_global_env "$NETWORK")"
-echo "[INFO - entrypoint] Beacon API URL: ${BEACON_API_URL}"
 export BEACON_API_URL
 
 echo "[INFO - entrypoint] Starting Lido DV Exit..."

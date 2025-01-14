@@ -34,6 +34,10 @@ case "$NETWORK" in
     ;;
 esac
 
+# To use staker scripts
+# shellcheck disable=SC1091
+. /etc/profile
+
 # Retrieve the beacon and execution URLs based on NETWORK
 # (Uses the helper functions defined at the top)
 _BEACON_NODE_API="$(get_beacon_api_url_from_global_env "$NETWORK")"

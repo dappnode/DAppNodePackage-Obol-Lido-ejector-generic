@@ -9,7 +9,6 @@ services:
     build:
       context: lido-dv-exit
       args:
-        DV_EXIT_VERSION: v0.2.0
         NETWORK: holesky
     image: lido-dv-exit.obol-lido-ejector-holesky.dnp.dappnode.eth:0.1.0
     environment:
