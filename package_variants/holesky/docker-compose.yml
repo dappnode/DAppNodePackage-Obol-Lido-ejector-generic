@@ -5,6 +5,7 @@ services:
       context: validator-ejector
       args:
         NETWORK: holesky
+    image: validator-ejector.obol-lido-ejector-holesky.dnp.dappnode.eth:0.1.0
   lido-dv-exit:
     build:
       context: lido-dv-exit
