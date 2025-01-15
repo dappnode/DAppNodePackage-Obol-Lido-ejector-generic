@@ -9,6 +9,7 @@ services:
     environment:
       OPERATOR_ID: ""
       CHARON_TO_EXIT_NUMBER: 1
+      BLOCKS_PRELOAD: 50000
     restart: on-failure
     volumes:
       - validator-ejector:/exitmessages

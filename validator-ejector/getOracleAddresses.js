@@ -41,12 +41,12 @@ async function getMembers() {
 
     // getMembers function returns an array of allowed oracle addresses
     const members = await contract.getMembers();
-    console.log("[INFO] Allowed oracle addresses: ", members);
+    console.log("[INFO] Fetched allowed oracle addresses: ", members);
 
     fs.writeFileSync(oracleListFilePath, JSON.stringify(members));
   } catch (error) {
     console.error("[ERROR] Could not fetch allowed oracles:", error);
-    console.log("[INFO] Using default oracle addresses...");
+    console.log("[WARNING] Using default oracle addresses... Please make sure default allowed Oracle addresses are correct.");
   }
 }
 
