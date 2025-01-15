@@ -5,13 +5,11 @@ services:
       context: validator-ejector
       args:
         NETWORK: mainnet
-      image: validator-ejector.obol-lido-ejector-mainnet.dnp.dappnode.eth:0.1.0
   lido-dv-exit:
     build:
       context: lido-dv-exit
       args:
         NETWORK: mainnet
-    image: lido-dv-exit.obol-lido-ejector-mainnet.dnp.dappnode.eth:0.1.0
     environment:
       LOG_LEVEL: info
       VALIDATOR_QUERY_CHUNK_SIZE: 5

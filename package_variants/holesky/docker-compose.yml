@@ -5,13 +5,11 @@ services:
       context: validator-ejector
       args:
         NETWORK: holesky
-    image: validator-ejector.obol-lido-ejector-holesky.dnp.dappnode.eth:0.1.0
   lido-dv-exit:
     build:
       context: lido-dv-exit
       args:
         NETWORK: holesky
-    image: lido-dv-exit.obol-lido-ejector-holesky.dnp.dappnode.eth:0.1.0
     environment:
       LOG_LEVEL: info
       VALIDATOR_QUERY_CHUNK_SIZE: 5
