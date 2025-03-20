@@ -4,7 +4,7 @@ services:
     build:
       context: validator-ejector
       args:
-        EJECTOR_VERSION: 1.6.0
+        EJECTOR_VERSION: 1.7.0
         STAKER_SCRIPTS_VERSION: v0.1.1
     environment:
       OPERATOR_ID: ""
@@ -13,12 +13,11 @@ services:
     restart: on-failure
     volumes:
       - validator-ejector:/exitmessages
-
   lido-dv-exit:
     build:
       context: lido-dv-exit
       args:
-        DV_EXIT_VERSION: v0.2.0
+        DV_EXIT_VERSION: v0.1.0
         STAKER_SCRIPTS_VERSION: v0.1.1
     environment:
       LOG_LEVEL: info
@@ -29,7 +28,6 @@ services:
     volumes:
       - validator-ejector:/exitmessages
       - charon-data:/charon
-
 volumes:
   validator-ejector: {}
   charon-data: {}
