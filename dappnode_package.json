@@ -2,7 +2,7 @@
   "upstream": [
     {
       "repo": "ObolNetwork/lido-dv-exit",
-      "version": "v0.1.0",
+      "version": "v0.3.0",
       "arg": "DV_EXIT_VERSION"
     },
     {
