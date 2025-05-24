@@ -17,7 +17,7 @@ services:
     build:
       context: lido-dv-exit
       args:
-        DV_EXIT_VERSION: v0.1.0
+        DV_EXIT_VERSION: v0.3.0
         STAKER_SCRIPTS_VERSION: v0.1.2
     environment:
       LOG_LEVEL: info
