@@ -1,0 +1,24 @@
+version: "3.5"
+services:
+  validator-ejector:
+    build:
+      context: validator-ejector
+      args:
+        NETWORK: hoodi
+  lido-dv-exit:
+    build:
+      context: lido-dv-exit
+      args:
+        NETWORK: hoodi
+    environment:
+      LOG_LEVEL: info
+      VALIDATOR_QUERY_CHUNK_SIZE: 5
+      CHARON_TO_EXIT_NUMBER: 1
+    restart: on-failure
+    volumes:
+      - validator-ejector:/exitmessages
+      - charon-data:/charon
+
+volumes:
+  validator-ejector: {}
+  charon-data: {}
