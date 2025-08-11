@@ -4,12 +4,12 @@ services:
     build:
       context: validator-ejector
       args:
-        NETWORK: holesky
+        NETWORK: hoodi
   lido-dv-exit:
     build:
       context: lido-dv-exit
       args:
-        NETWORK: holesky
+        NETWORK: hoodi
     environment:
       LOG_LEVEL: info
       VALIDATOR_QUERY_CHUNK_SIZE: 5
