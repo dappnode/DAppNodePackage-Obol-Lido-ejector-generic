@@ -1,4 +1,3 @@
-
 ARG DV_EXIT_VERSION
 FROM obolnetwork/lido-dv-exit:${DV_EXIT_VERSION}
 
@@ -13,7 +12,7 @@ USER root
 ADD ${STAKER_SCRIPTS_URL}/dvt_lsd_tools.sh /etc/profile.d/
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
-RUN mkdir -p /opt/charon/.charon \
+RUN mkdir -p /opt/charon/.charon && \
     apt-get update && \
     apt-get install -y curl && \
     apt-get clean && \
