@@ -4,7 +4,7 @@ services:
     build:
       context: validator-ejector
       args:
-        EJECTOR_VERSION: 1.8.0
+        EJECTOR_VERSION: 1.9.0
         STAKER_SCRIPTS_VERSION: v0.1.2
     environment:
       OPERATOR_ID: ""
@@ -17,7 +17,7 @@ services:
     build:
       context: lido-dv-exit
       args:
-        DV_EXIT_VERSION: v0.3.0
+        DV_EXIT_VERSION: v0.4.0
         STAKER_SCRIPTS_VERSION: v0.1.2
     environment:
       LOG_LEVEL: info
