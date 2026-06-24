@@ -1,57 +1,59 @@
 {
-  "upstream": [
+  "author": "dappnode",
+  "backup": [
     {
-      "repo": "ObolNetwork/lido-dv-exit",
-      "version": "v0.4.0",
-      "arg": "DV_EXIT_VERSION"
+      "name": "charon1",
+      "path": "/charon/charon1",
+      "service": "lido-dv-exit"
     },
     {
-      "repo": "lidofinance/validator-ejector",
-      "version": "1.9.0",
-      "arg": "EJECTOR_VERSION"
+      "name": "charon2",
+      "path": "/charon/charon2",
+      "service": "lido-dv-exit"
     },
     {
-      "repo": "dappnode/staker-package-scripts",
-      "version": "v0.1.2",
-      "arg": "STAKER_SCRIPTS_VERSION"
+      "name": "charon3",
+      "path": "/charon/charon3",
+      "service": "lido-dv-exit"
+    },
+    {
+      "name": "charon4",
+      "path": "/charon/charon4",
+      "service": "lido-dv-exit"
+    },
+    {
+      "name": "charon5",
+      "path": "/charon/charon5",
+      "service": "lido-dv-exit"
     }
   ],
-  "requirements": {
-    "minimumDappnodeVersion": "0.2.101"
-  },
+  "categories": [
+    "Developer tools"
+  ],
   "description": "obol-lido-ejector-generic.public.dappnode.eth description",
-  "type": "service",
-  "author": "dappnode",
-  "categories": ["Developer tools"],
+  "license": "GPL-3.0",
   "links": {
     "homepage": "https://your-project-homepage-or-docs.io"
   },
-  "license": "GPL-3.0",
-  "backup": [
+  "requirements": {
+    "minimumDappnodeVersion": "0.2.101"
+  },
+  "type": "service",
+  "upstream": [
     {
-      "path": "/charon/charon1",
-      "name": "charon1",
-      "service": "lido-dv-exit"
+      "arg": "DV_EXIT_VERSION",
+      "repo": "ObolNetwork/lido-dv-exit",
+      "version": "v0.5.2"
     },
     {
-      "path": "/charon/charon2",
-      "name": "charon2",
-      "service": "lido-dv-exit"
+      "arg": "EJECTOR_VERSION",
+      "repo": "lidofinance/validator-ejector",
+      "version": "1.9.0"
     },
     {
-      "path": "/charon/charon3",
-      "name": "charon3",
-      "service": "lido-dv-exit"
-    },
-    {
-      "path": "/charon/charon4",
-      "name": "charon4",
-      "service": "lido-dv-exit"
-    },
-    {
-      "path": "/charon/charon5",
-      "name": "charon5",
-      "service": "lido-dv-exit"
+      "arg": "STAKER_SCRIPTS_VERSION",
+      "repo": "dappnode/staker-package-scripts",
+      "version": "v0.1.2"
     }
   ]
 }
